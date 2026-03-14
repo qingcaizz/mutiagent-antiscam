@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 3 - OCR验证 (Next)
+**Current focus:** Phase 4 - Agent3-5验证 COMPLETE — Next: Phase 5
 
 ## Current Position
 
-Phase: 3 of 7 (Agent1-2验证) — In Progress
-Plan: 2 of 2 in current phase — COMPLETE
+Phase: 4 of 7 (Agent3-5验证) — COMPLETE
+Plan: 3 of 3 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 03-02: Agent2 TDD 测试套件，9 passed，修复 search_similar 接口和 similarity_score 转换
+Last activity: 2026-03-14 — 完成 04-03: Agent5 TDD 测试套件，9 passed，Phase 4 三文件合并 32 passed
 
-Progress: [█████░░░░░] 43% (6/14 plans total)
+Progress: [███████░░░] 64% (9/14 plans total)
 
 ## Performance Metrics
 
@@ -30,9 +30,10 @@ Progress: [█████░░░░░] 43% (6/14 plans total)
 | 01-基础环境 | 2 | 11 min | 5.5 min |
 | 02-监控层验证 | 2 | 5 min | 2.5 min |
 | 03-Agent1-2验证 | 2 | ~5 min | ~2.5 min |
+| 04-Agent3-5验证 | 3 | ~15 min | ~5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (7 min), 02-01 (3 min), 02-02 (2 min)
+- Last 5 plans: 02-01 (3 min), 02-02 (2 min), 03-01 (2.5 min), 03-02 (2.5 min), 04-03 (5 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -64,6 +65,8 @@ Recent decisions affecting current work:
 - [03-02]: similarity_score = round(max(0.0, 1.0 - _distance), 4)，归一化向量 L2→0-1 相似度
 - [03-02]: low_similarity_warning 基于 avg_similarity < similarity_threshold，而非案例数量
 - [03-02]: result 字典新增 cases 字段（含 similarity_score 的完整 TOP-5），供下游 Agent3 使用
+- [Phase 04-Agent3-5验证]: mock 路径 agents.agent5_intervention.send_alert 在调用方拦截，无需 patch utils.notifier.send_alert
+- [Phase 04-Agent3-5验证]: guardian_email 测试使用属性注入使 enabled 属性返回 True，比 patch enabled 更贴近真实场景
 
 ### Pending Todos
 
@@ -77,5 +80,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 03-02-PLAN.md 执行，Agent2 TDD 测试套件 9 passed，提交 3188cef
+Stopped at: 完成 04-03-PLAN.md 执行，Agent5 TDD 测试套件 9 passed，Phase 4 三文件合并 32 passed，提交 769b1df
 Resume file: None

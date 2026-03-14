@@ -37,10 +37,10 @@
 
 ### 干预与通知 (INTERVENTION)
 
-- [ ] **INTERV-01**: Agent5 通过飞书或钉钉 Webhook 推送风险预警（中风险及以上）
-- [ ] **INTERV-02**: Agent5 生成 Markdown 分析报告，保存到 reports/ 目录
-- [ ] **INTERV-03**: 极高风险时触发监护人联动（发送到 GUARDIAN_FEISHU/GUARDIAN_PHONE）
-- [ ] **INTERV-04**: Agent5 记录用户反馈入口，等待"误判"反馈
+- [x] **INTERV-01**: Agent5 通过飞书或钉钉 Webhook 推送风险预警（中风险及以上）
+- [x] **INTERV-02**: Agent5 生成 Markdown 分析报告，保存到 reports/ 目录
+- [x] **INTERV-03**: 极高风险时触发监护人联动（发送到 GUARDIAN_FEISHU/GUARDIAN_PHONE）
+- [x] **INTERV-04**: Agent5 记录用户反馈入口，等待"误判"反馈
 
 ### 透明文件夹 (TRANSPARENCY)
 
@@ -108,10 +108,10 @@
 | ASSESS-02 | Phase 4 | Pending |
 | ASSESS-03 | Phase 6 | Pending |
 | ASSESS-04 | Phase 4 | Pending |
-| INTERV-01 | Phase 4 | Pending |
-| INTERV-02 | Phase 4 | Pending |
-| INTERV-03 | Phase 4 | Pending |
-| INTERV-04 | Phase 4 | Pending |
+| INTERV-01 | Phase 4 | Complete |
+| INTERV-02 | Phase 4 | Complete |
+| INTERV-03 | Phase 4 | Complete |
+| INTERV-04 | Phase 4 | Complete |
 | TRANS-01 | Phase 5 | Pending |
 | TRANS-02 | Phase 5 | Pending |
 | TRANS-03 | Phase 5 | Pending |

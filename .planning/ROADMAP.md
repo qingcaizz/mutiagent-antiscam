@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: 基础环境** - 验证依赖安装、配置加载和项目结构能在 Windows 11 上正常工作
 - [x] **Phase 2: 监控层验证** - 确认 WeChat 和邮件监控能正确检测新文件并防止重复触发 (completed 2026-03-14)
 - [x] **Phase 3: Agent1-2 验证** - 确认预处理+意图识别和案例检索两个Agent输出符合规格 (completed 2026-03-14)
-- [ ] **Phase 4: Agent3-5 验证** - 确认判别、风险评估和干预通知三个Agent输出符合规格
+- [x] **Phase 4: Agent3-5 验证** - 确认判别、风险评估和干预通知三个Agent输出符合规格 (completed 2026-03-14)
 - [ ] **Phase 5: 透明文件夹与集成** - 确认完整5-Agent流水线能端到端运行并写入所有透明文件夹
 - [ ] **Phase 6: 自我迭代验证** - 确认误判反馈触发 ReflectorAgent 正确写入记忆并影响下次分析
 - [ ] **Phase 7: 开源准备** - 确认项目可被陌生开发者克隆、安装、运行，文档完整可读
@@ -76,12 +76,12 @@ Plans:
   2. Agent4 加载 risk-rules.json 后对高风险关键词命中的输入输出风险等级"高"或"极高"；极高风险时输出包含 `requires_guardian_alert: true`
   3. Agent5 在中风险及以上时向飞书/钉钉 Webhook 发送请求（可用 mock 验证），并在 `reports/` 目录生成 Markdown 报告文件
   4. Agent3-5 测试套件全部通过，含 mock Webhook 的干预测试和 risk-rules.json 规则匹配的参数化测试
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: 为 agent3_discriminator.py 编写 TDD 测试（判别逻辑、输出格式）
-- [ ] 04-02: 为 agent4_assessor.py 编写 TDD 测试（规则加载、关键词匹配、等级计算、监护人标志）
-- [ ] 04-03: 为 agent5_intervention.py 编写 TDD 测试（Webhook mock、报告生成、反馈入口）
+- [ ] 04-01-PLAN.md — Agent3 TDD 测试套件（mock anthropic、输出字段格式、降级失败处理）
+- [ ] 04-02-PLAN.md — Agent4 TDD 测试套件（规则加载、参数化关键词匹配、风险等级、监护人标志）
+- [ ] 04-03-PLAN.md — Agent5 TDD 测试套件（mock httpx Webhook、报告生成、监护人联动、反馈标志）
 
 ### Phase 5: 透明文件夹与集成
 **Goal**: 完整的 5-Agent 流水线能对真实输入端到端运行，所有中间状态写入透明文件夹，且可通过文件系统检查
@@ -138,7 +138,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 1. 基础环境 | 2/2 | Complete | 2026-03-14 |
 | 2. 监控层验证 | 2/2 | Complete   | 2026-03-14 |
 | 3. Agent1-2 验证 | 2/2 | Complete   | 2026-03-14 |
-| 4. Agent3-5 验证 | 0/3 | Not started | - |
+| 4. Agent3-5 验证 | 3/3 | Complete   | 2026-03-14 |
 | 5. 透明文件夹与集成 | 0/2 | Not started | - |
 | 6. 自我迭代验证 | 0/2 | Not started | - |
 | 7. 开源准备 | 0/2 | Not started | - |

@@ -2,6 +2,7 @@
 迭代闭环集成测试
 - 验证 capabilities.md 在 ReflectorAgent 更新后可被读取（REFLECT-04）
 - 验证 AssessmentAgent 在 memory_path 指向有效文件时接口畅通（ASSESS-03）
+- 验证 AssessmentAgent 实际消费 capabilities.md 规则，关键词命中时分数高于不命中（ASSESS-03 规则消费验证）
 - 无真实 Claude API 调用
 """
 import json
@@ -130,3 +131,31 @@ def test_agent4_reflects_updated_rules(tmp_path):
         data = json.load(f)
     assert data["status"] == "success", f"step4.json 中 status 应为 success，实际 {data['status']}"
     assert data["step"] == 4, f"step4.json 中 step 应为 4，实际 {data['step']}"
+
+    # ---- 步骤 A — 第二次运行（不含规则关键词的输入）----
+    step1_no_kw = {
+        "task_id": "loop-test-002",
+        "intent_label": "financial_fraud",
+        "extracted_text": "普通转账请求"
+    }
+    step_dir_no_kw = tmp_path / "step_output_no_kw"
+    step_dir_no_kw.mkdir()
+    result_no_kw = agent.run(step1_no_kw, step2, step3, step_dir_no_kw)
+    score_without_keyword = result_no_kw["final_risk_score"]
+
+    # ---- 步骤 B — 第三次运行（含规则关键词的输入）----
+    step1_with_kw = {
+        "task_id": "loop-test-003",
+        "intent_label": "financial_fraud",
+        "extracted_text": "关键词X 转账"
+    }
+    step_dir_with_kw = tmp_path / "step_output_with_kw"
+    step_dir_with_kw.mkdir()
+    result_with_kw = agent.run(step1_with_kw, step2, step3, step_dir_with_kw)
+    score_with_keyword = result_with_kw["final_risk_score"]
+
+    # ---- 断言：关键词命中时分数应高于不命中时 ----
+    assert score_with_keyword > score_without_keyword, (
+        f"包含 capabilities 规则关键词时分数({score_with_keyword:.3f}) "
+        f"应高于不含时({score_without_keyword:.3f})，实际相等或更低"
+    )

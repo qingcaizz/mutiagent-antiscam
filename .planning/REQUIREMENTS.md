@@ -32,7 +32,7 @@
 
 - [ ] **ASSESS-01**: Agent4 加载 risk-rules.json 规则，基于关键词匹配调整风险分数
 - [ ] **ASSESS-02**: Agent4 输出风险等级（安全/低/中/高/极高）
-- [ ] **ASSESS-03**: Agent4 读取 memory/capabilities.md 中的历史学习规则，纳入评估逻辑
+- [x] **ASSESS-03**: Agent4 读取 memory/capabilities.md 中的历史学习规则，纳入评估逻辑
 - [ ] **ASSESS-04**: 极高风险时标记 requires_guardian_alert=true
 
 ### 干预与通知 (INTERVENTION)
@@ -53,7 +53,7 @@
 - [x] **REFLECT-01**: 用户反馈"误判"时，ReflectorAgent 读取完整执行链路，识别根因
 - [x] **REFLECT-02**: ReflectorAgent 将反思结果写入 `memory/reflections/YYYY-MM-DD-case-{id}.md`
 - [x] **REFLECT-03**: ReflectorAgent 更新 `memory/capabilities.md`，追加新学习规则
-- [ ] **REFLECT-04**: 下次分析时，Agent4 读取 capabilities.md 中更新的规则
+- [x] **REFLECT-04**: 下次分析时，Agent4 读取 capabilities.md 中更新的规则
 
 ### 开源可用性 (OPENSOURCE)
 
@@ -106,7 +106,7 @@
 | DISCRIM-02 | Phase 4 | Pending |
 | ASSESS-01 | Phase 4 | Pending |
 | ASSESS-02 | Phase 4 | Pending |
-| ASSESS-03 | Phase 6 | Pending |
+| ASSESS-03 | Phase 6 | Complete |
 | ASSESS-04 | Phase 4 | Pending |
 | INTERV-01 | Phase 4 | Complete |
 | INTERV-02 | Phase 4 | Complete |
@@ -118,7 +118,7 @@
 | REFLECT-01 | Phase 6 | Complete |
 | REFLECT-02 | Phase 6 | Complete |
 | REFLECT-03 | Phase 6 | Complete |
-| REFLECT-04 | Phase 6 | Pending |
+| REFLECT-04 | Phase 6 | Complete |
 | OSS-01 | Phase 7 | Pending |
 | OSS-02 | Phase 1 | Complete |
 | OSS-03 | Phase 1 | Complete |

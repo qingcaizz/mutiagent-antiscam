@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 5 - 透明文件夹与集成 — COMPLETE（2/2 plans done）
+**Current focus:** Phase 6 - 自我迭代验证 — In Progress（2/5 plans done）
 
 ## Current Position
 
 Phase: 6 of 7 (自我迭代验证) — In Progress
-Plan: 1 of 5 in current phase — COMPLETE
+Plan: 2 of 5 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 06-01: ReflectorAgent TDD 测试套件 4 tests passed（REFLECT-01/02/03）
+Last activity: 2026-03-14 — 完成 06-02: 迭代闭环集成测试 2 tests passed（REFLECT-04/ASSESS-03），提交 a634db7
 
-Progress: [█████████░] 82% (12/14 plans total)
+Progress: [█████████░] 86% (13/14 plans total)
 
 ## Performance Metrics
 
@@ -38,6 +38,7 @@ Progress: [█████████░] 82% (12/14 plans total)
 - Trend: stable
 
 *Updated after each plan completion*
+| Phase 06-自我迭代验证 P02 | 54 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -76,6 +77,8 @@ Recent decisions affecting current work:
 - [05-02]: 诈骗样本复用 MOCK_STEP3/4（fraud_probability=0.91），正常样本重新定义低概率 mock
 - [06-01]: patch 路径 memory.reflector.anthropic.Anthropic 在调用方拦截，不调用真实 Claude API
 - [06-01]: ReflectorAgent 通过三个独立路径参数实现完全 tmp_path 隔离
+- [Phase 06-02]: test_capabilities_readable_after_update 通过 tmp_path 完全隔离，不依赖真实 capabilities.md
+- [Phase 06-02]: test_agent4_reflects_updated_rules 验证 ASSESS-03 接口契约（memory_path 可读+run() 完成+step4.json 存在），不验证内容影响分数
 
 ### Pending Todos
 

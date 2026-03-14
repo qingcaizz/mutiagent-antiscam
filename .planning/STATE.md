@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-03-14)
 
 ## Current Position
 
-Phase: 2 of 7 (监控层验证) — COMPLETE
+Phase: 3 of 7 (Agent1-2验证) — In Progress
 Plan: 2 of 2 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 02-02: Email 监控 TDD 测试套件，24 passed 0 skipped
+Last activity: 2026-03-14 — 完成 03-02: Agent2 TDD 测试套件，9 passed，修复 search_similar 接口和 similarity_score 转换
 
-Progress: [████░░░░░░] 28% (4/14 plans total)
+Progress: [█████░░░░░] 43% (6/14 plans total)
 
 ## Performance Metrics
 
@@ -29,6 +29,7 @@ Progress: [████░░░░░░] 28% (4/14 plans total)
 |-------|-------|-------|----------|
 | 01-基础环境 | 2 | 11 min | 5.5 min |
 | 02-监控层验证 | 2 | 5 min | 2.5 min |
+| 03-Agent1-2验证 | 2 | ~5 min | ~2.5 min |
 
 **Recent Trend:**
 - Last 5 plans: 01-01 (4 min), 01-02 (7 min), 02-01 (3 min), 02-02 (2 min)
@@ -56,6 +57,10 @@ Recent decisions affecting current work:
 - [02-01]: patch logger 路径为 'monitor.wechat_monitor.logger'，非 'loguru.logger'
 - [Phase 02-监控层验证]: 直接注入 mock connection，比 patch IMAP4_SSL 更简洁
 - [Phase 02-监控层验证]: Playwright 备路测试不依赖真实浏览器，验证 _create_task() 数据处理逻辑
+- [03-02]: LanceDBClient.search_similar() 是唯一检索方法，Agent2 旧的 search() 调用已替换
+- [03-02]: similarity_score = round(max(0.0, 1.0 - _distance), 4)，归一化向量 L2→0-1 相似度
+- [03-02]: low_similarity_warning 基于 avg_similarity < similarity_threshold，而非案例数量
+- [03-02]: result 字典新增 cases 字段（含 similarity_score 的完整 TOP-5），供下游 Agent3 使用
 
 ### Pending Todos
 
@@ -69,5 +74,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 02-02-PLAN.md 执行，Email 监控 TDD 测试套件 24 passed，提交 bab300c
+Stopped at: 完成 03-02-PLAN.md 执行，Agent2 TDD 测试套件 9 passed，提交 3188cef
 Resume file: None

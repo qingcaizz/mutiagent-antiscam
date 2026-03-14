@@ -19,8 +19,8 @@
 
 ### 案例检索 (RETRIEVAL)
 
-- [ ] **RETRIEVAL-01**: Agent2 能在 LanceDB 向量库中检索相似历史案例（TOP-5）
-- [ ] **RETRIEVAL-02**: Agent2 输出每个案例的相似度分数，并在平均相似度 < 0.65 时发出低相关度警告
+- [x] **RETRIEVAL-01**: Agent2 能在 LanceDB 向量库中检索相似历史案例（TOP-5）
+- [x] **RETRIEVAL-02**: Agent2 输出每个案例的相似度分数，并在平均相似度 < 0.65 时发出低相关度警告
 - [x] **RETRIEVAL-03**: 系统能从 sample-cases.json 初始化 LanceDB 案例库
 
 ### 判别 (DISCRIMINATION)
@@ -99,8 +99,8 @@
 | PREPROCESS-01 | Phase 3 | Pending |
 | PREPROCESS-02 | Phase 3 | Pending |
 | PREPROCESS-03 | Phase 3 | Pending |
-| RETRIEVAL-01 | Phase 3 | Pending |
-| RETRIEVAL-02 | Phase 3 | Pending |
+| RETRIEVAL-01 | Phase 3 | Complete |
+| RETRIEVAL-02 | Phase 3 | Complete |
 | RETRIEVAL-03 | Phase 1 | Complete |
 | DISCRIM-01 | Phase 4 | Pending |
 | DISCRIM-02 | Phase 4 | Pending |

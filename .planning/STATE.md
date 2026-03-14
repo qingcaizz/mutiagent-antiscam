@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 4 - Agent3-5验证 COMPLETE — Next: Phase 5
+**Current focus:** Phase 5 - 透明文件夹与集成 — Plan 1 COMPLETE
 
 ## Current Position
 
-Phase: 4 of 7 (Agent3-5验证) — COMPLETE
-Plan: 3 of 3 in current phase — COMPLETE
+Phase: 5 of 7 (透明文件夹与集成) — In Progress
+Plan: 1 of 2 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 04-03: Agent5 TDD 测试套件，9 passed，Phase 4 三文件合并 32 passed
+Last activity: 2026-03-14 — 完成 05-01: Orchestrator 集成测试 9 passed（TRANS-01/TRANS-02）
 
-Progress: [███████░░░] 64% (9/14 plans total)
+Progress: [████████░░] 71% (10/14 plans total)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 3.5 minutes
-- Total execution time: 0.23 hours
+- Total plans completed: 5
+- Average duration: 3.4 minutes
+- Total execution time: 0.27 hours
 
 **By Phase:**
 
@@ -31,9 +31,10 @@ Progress: [███████░░░] 64% (9/14 plans total)
 | 02-监控层验证 | 2 | 5 min | 2.5 min |
 | 03-Agent1-2验证 | 2 | ~5 min | ~2.5 min |
 | 04-Agent3-5验证 | 3 | ~15 min | ~5 min |
+| 05-透明文件夹与集成 | 1/2 | 5 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (3 min), 02-02 (2 min), 03-01 (2.5 min), 03-02 (2.5 min), 04-03 (5 min)
+- Last 5 plans: 02-02 (2 min), 03-01 (2.5 min), 03-02 (2.5 min), 04-03 (5 min), 05-01 (5 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -67,6 +68,9 @@ Recent decisions affecting current work:
 - [03-02]: result 字典新增 cases 字段（含 similarity_score 的完整 TOP-5），供下游 Agent3 使用
 - [Phase 04-Agent3-5验证]: mock 路径 agents.agent5_intervention.send_alert 在调用方拦截，无需 patch utils.notifier.send_alert
 - [Phase 04-Agent3-5验证]: guardian_email 测试使用属性注入使 enabled 属性返回 True，比 patch enabled 更贴近真实场景
+- [05-01]: patch 整个 Agent 类（而非实例方法），防止 Orchestrator.__init__ 触发真实 LanceDB/API 初始化
+- [05-01]: make_agent_run 工厂函数通过 args[-1] 获取 step_dir，兼容所有 Agent 不同参数数量（通用模式）
+- [05-01]: _write_full_chain_jsonl 已在 orchestrator.py 实现，前置检查确认后直接编写测试
 
 ### Pending Todos
 
@@ -80,5 +84,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 04-03-PLAN.md 执行，Agent5 TDD 测试套件 9 passed，Phase 4 三文件合并 32 passed，提交 769b1df
+Stopped at: 完成 05-01-PLAN.md 执行，Orchestrator 集成测试 9 passed（TRANS-01/TRANS-02），提交 c03e86f
 Resume file: None

@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "description": "诈骗意图标签配置，可由用户自定义，数量和名称均可修改",
+  "labels": [
+    {"id": "financial_fraud", "name": "金融诈骗", "description": "转账/贷款/投资类诈骗"},
+    {"id": "impersonation", "name": "冒充身份", "description": "冒充公检法/亲友/客服"},
+    {"id": "phishing", "name": "钓鱼攻击", "description": "钓鱼链接/验证码窃取"},
+    {"id": "romance_scam", "name": "情感骗局", "description": "情感骗局/杀猪盘"},
+    {"id": "lottery_scam", "name": "中奖诈骗", "description": "虚假中奖通知"},
+    {"id": "job_scam", "name": "招聘刷单诈骗", "description": "虚假招聘/刷单任务"},
+    {"id": "normal_business", "name": "正常商业", "description": "合法商业信息"},
+    {"id": "personal_communication", "name": "正常通讯", "description": "正常个人通讯"},
+    {"id": "spam_advertising", "name": "垃圾广告", "description": "垃圾广告（非诈骗）"},
+    {"id": "unknown", "name": "无法判断", "description": "无法确定意图"}
+  ]
+}

@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-03-14)
 
 ## Current Position
 
-Phase: 5 of 7 (透明文件夹与集成) — COMPLETE
-Plan: 2 of 2 in current phase — COMPLETE
+Phase: 6 of 7 (自我迭代验证) — In Progress
+Plan: 1 of 5 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 05-02: 日志写入与监控触发链路集成测试 6 tests passed（TRANS-03）
+Last activity: 2026-03-14 — 完成 06-01: ReflectorAgent TDD 测试套件 4 tests passed（REFLECT-01/02/03）
 
-Progress: [█████████░] 79% (11/14 plans total)
+Progress: [█████████░] 82% (12/14 plans total)
 
 ## Performance Metrics
 
@@ -74,6 +74,8 @@ Recent decisions affecting current work:
 - [05-02]: loguru 临时 sink 用 try/finally 确保 logger.remove，防止跨测试日志泄漏
 - [05-02]: WeChatFileHandler 测试通过 capture_task 捕获回调参数，再从 pipeline_dir 断言 input.json 存在
 - [05-02]: 诈骗样本复用 MOCK_STEP3/4（fraud_probability=0.91），正常样本重新定义低概率 mock
+- [06-01]: patch 路径 memory.reflector.anthropic.Anthropic 在调用方拦截，不调用真实 Claude API
+- [06-01]: ReflectorAgent 通过三个独立路径参数实现完全 tmp_path 隔离
 
 ### Pending Todos
 
@@ -87,5 +89,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 05-02-PLAN.md 执行，日志写入与监控触发链路集成测试 47 tests passed（TRANS-03），提交 6d84aff
+Stopped at: 完成 06-01-PLAN.md 执行，ReflectorAgent TDD 测试套件 4 tests passed（REFLECT-01/02/03），提交 de3ec77
 Resume file: None

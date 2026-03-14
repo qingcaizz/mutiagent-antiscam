@@ -50,9 +50,9 @@
 
 ### 自我迭代 (REFLECTION)
 
-- [ ] **REFLECT-01**: 用户反馈"误判"时，ReflectorAgent 读取完整执行链路，识别根因
-- [ ] **REFLECT-02**: ReflectorAgent 将反思结果写入 `memory/reflections/YYYY-MM-DD-case-{id}.md`
-- [ ] **REFLECT-03**: ReflectorAgent 更新 `memory/capabilities.md`，追加新学习规则
+- [x] **REFLECT-01**: 用户反馈"误判"时，ReflectorAgent 读取完整执行链路，识别根因
+- [x] **REFLECT-02**: ReflectorAgent 将反思结果写入 `memory/reflections/YYYY-MM-DD-case-{id}.md`
+- [x] **REFLECT-03**: ReflectorAgent 更新 `memory/capabilities.md`，追加新学习规则
 - [ ] **REFLECT-04**: 下次分析时，Agent4 读取 capabilities.md 中更新的规则
 
 ### 开源可用性 (OPENSOURCE)
@@ -115,9 +115,9 @@
 | TRANS-01 | Phase 5 | Complete |
 | TRANS-02 | Phase 5 | Complete |
 | TRANS-03 | Phase 5 | Complete |
-| REFLECT-01 | Phase 6 | Pending |
-| REFLECT-02 | Phase 6 | Pending |
-| REFLECT-03 | Phase 6 | Pending |
+| REFLECT-01 | Phase 6 | Complete |
+| REFLECT-02 | Phase 6 | Complete |
+| REFLECT-03 | Phase 6 | Complete |
 | REFLECT-04 | Phase 6 | Pending |
 | OSS-01 | Phase 7 | Pending |
 | OSS-02 | Phase 1 | Complete |

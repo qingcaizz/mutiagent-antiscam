@@ -1,0 +1,39 @@
+# 核心依赖
+anthropic>=0.40.0
+
+# 文件监控
+watchdog>=4.0.0
+
+# OCR
+paddleocr>=2.7.0
+paddlepaddle>=2.6.0
+Pillow>=10.0.0
+
+# 向量数据库
+lancedb>=0.5.0
+sentence-transformers>=2.7.0
+
+# 邮件处理
+imaplib2>=3.6
+
+# HTTP/通知
+httpx>=0.27.0
+requests>=2.31.0
+
+# 数据处理
+numpy>=1.24.0
+pandas>=2.0.0
+
+# 工具库
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+loguru>=0.7.0
+tqdm>=4.66.0
+
+# 测试
+pytest>=7.4.0
+
+# Windows 注意事项：
+# - paddlepaddle 在 Windows 需要 Visual C++ Redistributable
+#   若安装失败可用 paddlepaddle-gpu 替代或跳过 OCR 测试
+# - paddleocr Windows 安装命令补充：pip install "paddleocr>=2.7.0" --no-deps 后手动安装依赖

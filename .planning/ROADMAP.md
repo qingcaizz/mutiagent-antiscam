@@ -46,11 +46,11 @@ Plans:
   2. 配置 IMAP 账号后，新邮件（含图片附件）在下一个轮询周期内被检测并记录
   3. 将同一张图片复制两次进入监控目录，日志仅显示一条触发记录（重复过滤生效）
   4. 监控层测试套件全部通过，覆盖正常路径和边界情况（空目录、非图片文件）
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: 为 wechat_monitor.py 编写 TDD 测试套件（文件检测、去重、日志）
-- [ ] 02-02: 为 email_monitor.py 编写 TDD 测试套件（IMAP 轮询、附件提取）
+- [ ] 02-01-PLAN.md — WeChat 监控 TDD 测试套件（文件类型过滤、去重防重复、logger 断言）
+- [ ] 02-02-PLAN.md — Email 监控 TDD 测试套件（IMAP mock 主路、MIME 解析、Playwright 备路骨架）
 
 ### Phase 3: Agent1-2 验证
 **Goal**: 预处理+意图识别 Agent 和案例检索 Agent 的输出格式和内容符合下游 Agent 要求

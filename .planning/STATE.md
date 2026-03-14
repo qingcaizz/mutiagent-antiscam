@@ -5,32 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 1 - 基础环境 (COMPLETE)
+**Current focus:** Phase 2 - 监控层验证 (In Progress)
 
 ## Current Position
 
-Phase: 1 of 7 (基础环境) — COMPLETE
-Plan: 2 of 2 in current phase — COMPLETE
-Status: Phase Complete, Advancing to Phase 2
-Last activity: 2026-03-14 — 完成 01-02: 配置加载 TDD + LanceDB 初始化，17 passed 1 skipped
+Phase: 2 of 7 (监控层验证) — IN PROGRESS
+Plan: 1 of 2 in current phase — COMPLETE
+Status: In Progress
+Last activity: 2026-03-14 — 完成 02-01: WeChat 监控 TDD 测试套件，18 passed 0 skipped
 
-Progress: [██░░░░░░░░] 14% (2/14 plans total)
+Progress: [███░░░░░░░] 21% (3/14 plans total)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 5.5 minutes
-- Total execution time: 0.18 hours
+- Total plans completed: 3
+- Average duration: 4.7 minutes
+- Total execution time: 0.23 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-基础环境 | 2 | 11 min | 5.5 min |
+| 02-监控层验证 | 1 | 3 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (7 min)
+- Last 5 plans: 01-01 (4 min), 01-02 (7 min), 02-01 (3 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -50,6 +51,9 @@ Recent decisions affecting current work:
 - [01-02]: init_lancedb 幂等设计：count > 0 时直接返回，不重复插入
 - [01-02]: LanceDB features 占位数据从 [] 改为 ['placeholder']，修复 Arrow 类型推断 bug
 - [01-02]: scripts/init_lancedb.py 需从项目根目录以 python -m scripts.init_lancedb 运行
+- [02-01]: Observer() 在 WeChatMonitor.__init__ 中实例化，patch 必须包裹整个构造调用
+- [02-01]: on_created 内 exists()+st_size==0 双重检查，单元测试必须写入非空真实文件
+- [02-01]: patch logger 路径为 'monitor.wechat_monitor.logger'，非 'loguru.logger'
 
 ### Pending Todos
 
@@ -63,5 +67,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 01-02-PLAN.md 执行，配置加载和 LanceDB 初始化验证通过，提交 8eab378、66cdc15、106831a
+Stopped at: 完成 02-01-PLAN.md 执行，WeChat 监控 TDD 测试套件 18 passed，提交 b06cbe2
 Resume file: None

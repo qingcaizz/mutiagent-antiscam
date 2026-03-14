@@ -49,7 +49,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — WeChat 监控 TDD 测试套件（文件类型过滤、去重防重复、logger 断言）
+- [x] 02-01-PLAN.md — WeChat 监控 TDD 测试套件（文件类型过滤、去重防重复、logger 断言）
 - [ ] 02-02-PLAN.md — Email 监控 TDD 测试套件（IMAP mock 主路、MIME 解析、Playwright 备路骨架）
 
 ### Phase 3: Agent1-2 验证
@@ -136,7 +136,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. 基础环境 | 2/2 | Complete | 2026-03-14 |
-| 2. 监控层验证 | 0/2 | Not started | - |
+| 2. 监控层验证 | 1/2 | In Progress | - |
 | 3. Agent1-2 验证 | 0/2 | Not started | - |
 | 4. Agent3-5 验证 | 0/3 | Not started | - |
 | 5. 透明文件夹与集成 | 0/2 | Not started | - |

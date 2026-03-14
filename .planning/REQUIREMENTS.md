@@ -13,8 +13,8 @@
 
 ### 预处理与意图识别 (PREPROCESS)
 
-- [x] **PREPROCESS-01**: Agent1 能用 PaddleOCR 从图片提取文字
-- [x] **PREPROCESS-02**: Agent1 能调用 Claude Vision 分析图片语义内容
+- [x] **PREPROCESS-01**: Agent1 能用 GLM-4.6V 分析图片内容并生成图像描述（替代 PaddleOCR）
+- [x] **PREPROCESS-02**: Agent1 能调用 Qwen3.5 对图像描述进行意图分类（替代 Claude Vision）
 - [x] **PREPROCESS-03**: Agent1 输出意图标签（10种）、置信度、关键特征、内容摘要
 
 ### 案例检索 (RETRIEVAL)
@@ -131,4 +131,4 @@
 
 ---
 *Requirements defined: 2026-03-14*
-*Last updated: 2026-03-14 after roadmap creation (phase assignments updated)*
+*Last updated: 2026-03-14 — Phase 3 完成后同步技术选型（GLM-4.6V + Qwen3.5 替代 PaddleOCR + Claude Vision）*

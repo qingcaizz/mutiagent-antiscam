@@ -5,14 +5,14 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 7 - 开源准备 — In Progress（1/2 plans done）
+**Current focus:** Phase 7 - 开源准备 — COMPLETE（2/2 plans done）
 
 ## Current Position
 
-Phase: 7 of 7 (开源准备) — In Progress
-Plan: 1 of 2 in current phase — COMPLETE
-Status: In Progress
-Last activity: 2026-03-14 — 完成 07-01: 中英文双语 README.md（OSS-01），提交 f1c1c99
+Phase: 7 of 7 (开源准备) — COMPLETE
+Plan: 2 of 2 in current phase — COMPLETE
+Status: Complete
+Last activity: 2026-03-14 — 完成 07-02: PII 审查 + 依赖同步 + .gitignore 安全配置（OSS-04），提交 42fb2dd
 
 Progress: [██████████] 100% (14/14 plans total)
 
@@ -41,6 +41,7 @@ Progress: [██████████] 100% (14/14 plans total)
 | Phase 06-自我迭代验证 P02 | 54 | 2 tasks | 1 files |
 | Phase 06-自我迭代验证 P03 | 10 | 2 tasks | 2 files |
 | Phase 07-开源准备 P01 | 5 | 1 tasks | 1 files |
+| Phase 07-开源准备 P02 | 5 | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,7 @@ Recent decisions affecting current work:
 - [Phase 06-02]: test_agent4_reflects_updated_rules 验证 ASSESS-03 接口契约（memory_path 可读+run() 完成+step4.json 存在），不验证内容影响分数
 - [Phase 06]: 双向子串匹配解决中文无空格分词：et in kw.lower() 而非 kw in extracted_text，同时对齐 lower() 大小写
 - [Phase 07-开源准备]: README 仅列出 ZHIPU_API_KEY/NAU_API_KEY，不提 ANTHROPIC_API_KEY（已废弃）
+- [Phase 07-开源准备]: agent1/agent3 均使用 OpenAI SDK 调用 Qwen API，openai>=1.0.0 为必要依赖
 
 ### Pending Todos
 

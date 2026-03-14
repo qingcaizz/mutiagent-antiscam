@@ -1,6 +1,9 @@
 # 核心依赖
 anthropic>=0.40.0
 
+# Qwen API（OpenAI 兼容接口）
+openai>=1.0.0
+
 # 文件监控
 watchdog>=4.0.0
 

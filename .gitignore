@@ -1,1 +1,29 @@
+# 环境变量与密钥
 .env
+*.key
+api key.txt
+api-key-hardcode-example.nau-zhipu.txt
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# 测试缓存
+.pytest_cache/
+
+# 运行时目录（包含用户数据）
+logs/
+conversations/
+reports/
+.pipeline/
+pipeline/
+
+# 向量数据库数据（含用户案例特征）
+cases/lancedb/
+
+# IDE
+.vscode/
+.idea/

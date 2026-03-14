@@ -107,7 +107,7 @@ Plans:
   2. `memory/reflections/` 目录出现新的 `YYYY-MM-DD-case-{id}.md` 反思文件，文件内容包含根因和改进建议
   3. `memory/capabilities.md` 在反思后追加新条目，条目可被 Agent4 在下次分析时读取
   4. 对同类样本再次运行分析时，Agent4 的评估逻辑能体现 capabilities.md 中的新规则（风险分数或等级有变化）
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
 - [ ] 06-01: 为 reflector.py 编写 TDD 测试（链路读取、根因识别、反思文件写入）
@@ -122,11 +122,11 @@ Plans:
   2. 按 README 步骤在干净环境执行，能成功运行系统并处理一个测试输入（端到端冒烟测试）
   3. sample-cases.json 中不含任何真实用户 PII（姓名/手机/账号/真实地址），经过匿名化审查
   4. requirements.txt 和 .env.example 文件齐全且与实际代码同步，无遗漏依赖
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: 编写 README.md（中英文），撰写完整安装和使用教程
-- [ ] 07-02: 审查 sample-cases.json 匿名化，执行开源前最终检查清单
+- [ ] 07-01-PLAN.md — 编写 README.md（中英文双语），完整安装和使用教程
+- [ ] 07-02-PLAN.md — PII 审查 + requirements.txt 同步 + 开源检查清单
 
 ## Progress
 

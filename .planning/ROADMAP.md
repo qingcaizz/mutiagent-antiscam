@@ -31,11 +31,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. 复制 `.env.example` 填入 API Key 后，配置加载脚本能正确读取所有必需环境变量且无 KeyError
   3. LanceDB 案例库能从 `sample-cases.json` 初始化，命令行输出"案例库初始化成功，共 N 条记录"
   4. `logs/` 目录自动创建，监控日志文件可写入
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: 整理并锁定 requirements.txt，验证 Windows 兼容性
-- [ ] 01-02: 编写环境验证脚本，测试配置加载和 LanceDB 初始化
+- [ ] 01-01-PLAN.md — 修正 requirements.txt（移除 agentscope），TDD 验证所有核心包可 import
+- [ ] 01-02-PLAN.md — TDD 实现 config/load_config.py 和 scripts/init_lancedb.py，验证配置加载与案例库初始化
 
 ### Phase 2: 监控层验证
 **Goal**: WeChat 文件夹监控和邮件 IMAP 监控能可靠检测新内容，且同一文件不触发重复分析
@@ -135,7 +135,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. 基础环境 | 0/2 | Not started | - |
+| 1. 基础环境 | 0/2 | Planned | - |
 | 2. 监控层验证 | 0/2 | Not started | - |
 | 3. Agent1-2 验证 | 0/2 | Not started | - |
 | 4. Agent3-5 验证 | 0/3 | Not started | - |

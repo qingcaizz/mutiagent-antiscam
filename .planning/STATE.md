@@ -57,6 +57,9 @@ Recent decisions affecting current work:
 - [02-01]: patch logger 路径为 'monitor.wechat_monitor.logger'，非 'loguru.logger'
 - [Phase 02-监控层验证]: 直接注入 mock connection，比 patch IMAP4_SSL 更简洁
 - [Phase 02-监控层验证]: Playwright 备路测试不依赖真实浏览器，验证 _create_task() 数据处理逻辑
+- [03-01]: Agent1 从 anthropic SDK + PaddleOCR 迁移至 GLM-4.6V（requests）+ Qwen3.5（OpenAI SDK）
+- [03-01]: intent_labels 从 config/intent_labels.json 动态读取，支持用户自定义，不再硬编码
+- [03-01]: Qwen 返回非法 intent_label 时自动回退 unknown，不抛异常
 - [03-02]: LanceDBClient.search_similar() 是唯一检索方法，Agent2 旧的 search() 调用已替换
 - [03-02]: similarity_score = round(max(0.0, 1.0 - _distance), 4)，归一化向量 L2→0-1 相似度
 - [03-02]: low_similarity_warning 基于 avg_similarity < similarity_threshold，而非案例数量

@@ -13,9 +13,9 @@
 
 ### 预处理与意图识别 (PREPROCESS)
 
-- [ ] **PREPROCESS-01**: Agent1 能用 PaddleOCR 从图片提取文字
-- [ ] **PREPROCESS-02**: Agent1 能调用 Claude Vision 分析图片语义内容
-- [ ] **PREPROCESS-03**: Agent1 输出意图标签（10种）、置信度、关键特征、内容摘要
+- [x] **PREPROCESS-01**: Agent1 能用 PaddleOCR 从图片提取文字
+- [x] **PREPROCESS-02**: Agent1 能调用 Claude Vision 分析图片语义内容
+- [x] **PREPROCESS-03**: Agent1 输出意图标签（10种）、置信度、关键特征、内容摘要
 
 ### 案例检索 (RETRIEVAL)
 
@@ -96,9 +96,9 @@
 | MONITOR-01 | Phase 2 | Complete |
 | MONITOR-02 | Phase 2 | Complete |
 | MONITOR-03 | Phase 1 | Complete |
-| PREPROCESS-01 | Phase 3 | Pending |
-| PREPROCESS-02 | Phase 3 | Pending |
-| PREPROCESS-03 | Phase 3 | Pending |
+| PREPROCESS-01 | Phase 3 | Complete |
+| PREPROCESS-02 | Phase 3 | Complete |
+| PREPROCESS-03 | Phase 3 | Complete |
 | RETRIEVAL-01 | Phase 3 | Complete |
 | RETRIEVAL-02 | Phase 3 | Complete |
 | RETRIEVAL-03 | Phase 1 | Complete |

@@ -9,7 +9,7 @@
 
 - [ ] **MONITOR-01**: 系统能监控指定 WeChat 文件夹（Image/File 目录），新图片或文档出现时自动触发分析
 - [ ] **MONITOR-02**: 系统能通过 IMAP 轮询监控邮箱新邮件及图片附件
-- [ ] **MONITOR-03**: 监控层防止重复触发（同一文件不重复分析），并记录监控日志
+- [x] **MONITOR-03**: 监控层防止重复触发（同一文件不重复分析），并记录监控日志
 
 ### 预处理与意图识别 (PREPROCESS)
 
@@ -21,7 +21,7 @@
 
 - [ ] **RETRIEVAL-01**: Agent2 能在 LanceDB 向量库中检索相似历史案例（TOP-5）
 - [ ] **RETRIEVAL-02**: Agent2 输出每个案例的相似度分数，并在平均相似度 < 0.65 时发出低相关度警告
-- [ ] **RETRIEVAL-03**: 系统能从 sample-cases.json 初始化 LanceDB 案例库
+- [x] **RETRIEVAL-03**: 系统能从 sample-cases.json 初始化 LanceDB 案例库
 
 ### 判别 (DISCRIMINATION)
 
@@ -95,13 +95,13 @@
 |-------------|-------|--------|
 | MONITOR-01 | Phase 2 | Pending |
 | MONITOR-02 | Phase 2 | Pending |
-| MONITOR-03 | Phase 1 | Pending |
+| MONITOR-03 | Phase 1 | Complete |
 | PREPROCESS-01 | Phase 3 | Pending |
 | PREPROCESS-02 | Phase 3 | Pending |
 | PREPROCESS-03 | Phase 3 | Pending |
 | RETRIEVAL-01 | Phase 3 | Pending |
 | RETRIEVAL-02 | Phase 3 | Pending |
-| RETRIEVAL-03 | Phase 1 | Pending |
+| RETRIEVAL-03 | Phase 1 | Complete |
 | DISCRIM-01 | Phase 4 | Pending |
 | DISCRIM-02 | Phase 4 | Pending |
 | ASSESS-01 | Phase 4 | Pending |

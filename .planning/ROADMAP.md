@@ -12,7 +12,7 @@
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: 基础环境** - 验证依赖安装、配置加载和项目结构能在 Windows 11 上正常工作
+- [x] **Phase 1: 基础环境** - 验证依赖安装、配置加载和项目结构能在 Windows 11 上正常工作
 - [ ] **Phase 2: 监控层验证** - 确认 WeChat 和邮件监控能正确检测新文件并防止重复触发
 - [ ] **Phase 3: Agent1-2 验证** - 确认预处理+意图识别和案例检索两个Agent输出符合规格
 - [ ] **Phase 4: Agent3-5 验证** - 确认判别、风险评估和干预通知三个Agent输出符合规格
@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — 修正 requirements.txt（移除 agentscope），TDD 验证所有核心包可 import
-- [ ] 01-02-PLAN.md — TDD 实现 config/load_config.py 和 scripts/init_lancedb.py，验证配置加载与案例库初始化
+- [x] 01-01-PLAN.md — 修正 requirements.txt（移除 agentscope），TDD 验证所有核心包可 import
+- [x] 01-02-PLAN.md — TDD 实现 config/load_config.py 和 scripts/init_lancedb.py，验证配置加载与案例库初始化
 
 ### Phase 2: 监控层验证
 **Goal**: WeChat 文件夹监控和邮件 IMAP 监控能可靠检测新内容，且同一文件不触发重复分析
@@ -135,7 +135,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. 基础环境 | 1/2 | In Progress|  |
+| 1. 基础环境 | 2/2 | Complete | 2026-03-14 |
 | 2. 监控层验证 | 0/2 | Not started | - |
 | 3. Agent1-2 验证 | 0/2 | Not started | - |
 | 4. Agent3-5 验证 | 0/3 | Not started | - |

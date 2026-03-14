@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 5 - 透明文件夹与集成 — Plan 1 COMPLETE
+**Current focus:** Phase 5 - 透明文件夹与集成 — COMPLETE（2/2 plans done）
 
 ## Current Position
 
-Phase: 5 of 7 (透明文件夹与集成) — In Progress
-Plan: 1 of 2 in current phase — COMPLETE
+Phase: 5 of 7 (透明文件夹与集成) — COMPLETE
+Plan: 2 of 2 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 05-01: Orchestrator 集成测试 9 passed（TRANS-01/TRANS-02）
+Last activity: 2026-03-14 — 完成 05-02: 日志写入与监控触发链路集成测试 6 tests passed（TRANS-03）
 
-Progress: [████████░░] 71% (10/14 plans total)
+Progress: [█████████░] 79% (11/14 plans total)
 
 ## Performance Metrics
 
@@ -31,7 +31,7 @@ Progress: [████████░░] 71% (10/14 plans total)
 | 02-监控层验证 | 2 | 5 min | 2.5 min |
 | 03-Agent1-2验证 | 2 | ~5 min | ~2.5 min |
 | 04-Agent3-5验证 | 3 | ~15 min | ~5 min |
-| 05-透明文件夹与集成 | 1/2 | 5 min | 5 min |
+| 05-透明文件夹与集成 | 2/2 | 10 min | 5 min |
 
 **Recent Trend:**
 - Last 5 plans: 02-02 (2 min), 03-01 (2.5 min), 03-02 (2.5 min), 04-03 (5 min), 05-01 (5 min)
@@ -71,6 +71,9 @@ Recent decisions affecting current work:
 - [05-01]: patch 整个 Agent 类（而非实例方法），防止 Orchestrator.__init__ 触发真实 LanceDB/API 初始化
 - [05-01]: make_agent_run 工厂函数通过 args[-1] 获取 step_dir，兼容所有 Agent 不同参数数量（通用模式）
 - [05-01]: _write_full_chain_jsonl 已在 orchestrator.py 实现，前置检查确认后直接编写测试
+- [05-02]: loguru 临时 sink 用 try/finally 确保 logger.remove，防止跨测试日志泄漏
+- [05-02]: WeChatFileHandler 测试通过 capture_task 捕获回调参数，再从 pipeline_dir 断言 input.json 存在
+- [05-02]: 诈骗样本复用 MOCK_STEP3/4（fraud_probability=0.91），正常样本重新定义低概率 mock
 
 ### Pending Todos
 
@@ -84,5 +87,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 05-01-PLAN.md 执行，Orchestrator 集成测试 9 passed（TRANS-01/TRANS-02），提交 c03e86f
+Stopped at: 完成 05-02-PLAN.md 执行，日志写入与监控触发链路集成测试 47 tests passed（TRANS-03），提交 6d84aff
 Resume file: None

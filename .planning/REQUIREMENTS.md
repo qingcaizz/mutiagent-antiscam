@@ -46,7 +46,7 @@
 
 - [x] **TRANS-01**: 每个任务的完整 5-Agent 执行链路保存为 `conversations/YYYY-MM-DD/task-{id}-full.jsonl`
 - [x] **TRANS-02**: 每个 step 的中间结果保存为 `.pipeline/tasks/{taskId}/step{N}.json`
-- [ ] **TRANS-03**: 系统运行日志写入 `logs/` 目录（monitor.log, pipeline.log）
+- [x] **TRANS-03**: 系统运行日志写入 `logs/` 目录（monitor.log, pipeline.log）
 
 ### 自我迭代 (REFLECTION)
 
@@ -114,7 +114,7 @@
 | INTERV-04 | Phase 4 | Complete |
 | TRANS-01 | Phase 5 | Complete |
 | TRANS-02 | Phase 5 | Complete |
-| TRANS-03 | Phase 5 | Pending |
+| TRANS-03 | Phase 5 | Complete |
 | REFLECT-01 | Phase 6 | Pending |
 | REFLECT-02 | Phase 6 | Pending |
 | REFLECT-03 | Phase 6 | Pending |

@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: 监控层验证** - 确认 WeChat 和邮件监控能正确检测新文件并防止重复触发 (completed 2026-03-14)
 - [x] **Phase 3: Agent1-2 验证** - 确认预处理+意图识别和案例检索两个Agent输出符合规格 (completed 2026-03-14)
 - [x] **Phase 4: Agent3-5 验证** - 确认判别、风险评估和干预通知三个Agent输出符合规格 (completed 2026-03-14)
-- [ ] **Phase 5: 透明文件夹与集成** - 确认完整5-Agent流水线能端到端运行并写入所有透明文件夹
+- [x] **Phase 5: 透明文件夹与集成** - 确认完整5-Agent流水线能端到端运行并写入所有透明文件夹 (completed 2026-03-14)
 - [ ] **Phase 6: 自我迭代验证** - 确认误判反馈触发 ReflectorAgent 正确写入记忆并影响下次分析
 - [ ] **Phase 7: 开源准备** - 确认项目可被陌生开发者克隆、安装、运行，文档完整可读
 
@@ -139,6 +139,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 2. 监控层验证 | 2/2 | Complete   | 2026-03-14 |
 | 3. Agent1-2 验证 | 2/2 | Complete   | 2026-03-14 |
 | 4. Agent3-5 验证 | 3/3 | Complete    | 2026-03-14 |
-| 5. 透明文件夹与集成 | 1/2 | In Progress|  |
+| 5. 透明文件夹与集成 | 2/2 | Complete   | 2026-03-14 |
 | 6. 自我迭代验证 | 0/2 | Not started | - |
 | 7. 开源准备 | 0/2 | Not started | - |

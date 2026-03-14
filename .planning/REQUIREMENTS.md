@@ -93,36 +93,36 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| MONITOR-01 | Phase 1 | Pending |
-| MONITOR-02 | Phase 1 | Pending |
+| MONITOR-01 | Phase 2 | Pending |
+| MONITOR-02 | Phase 2 | Pending |
 | MONITOR-03 | Phase 1 | Pending |
-| PREPROCESS-01 | Phase 2 | Pending |
-| PREPROCESS-02 | Phase 2 | Pending |
-| PREPROCESS-03 | Phase 2 | Pending |
-| RETRIEVAL-01 | Phase 2 | Pending |
-| RETRIEVAL-02 | Phase 2 | Pending |
-| RETRIEVAL-03 | Phase 2 | Pending |
-| DISCRIM-01 | Phase 3 | Pending |
-| DISCRIM-02 | Phase 3 | Pending |
-| ASSESS-01 | Phase 3 | Pending |
-| ASSESS-02 | Phase 3 | Pending |
-| ASSESS-03 | Phase 3 | Pending |
-| ASSESS-04 | Phase 3 | Pending |
+| PREPROCESS-01 | Phase 3 | Pending |
+| PREPROCESS-02 | Phase 3 | Pending |
+| PREPROCESS-03 | Phase 3 | Pending |
+| RETRIEVAL-01 | Phase 3 | Pending |
+| RETRIEVAL-02 | Phase 3 | Pending |
+| RETRIEVAL-03 | Phase 1 | Pending |
+| DISCRIM-01 | Phase 4 | Pending |
+| DISCRIM-02 | Phase 4 | Pending |
+| ASSESS-01 | Phase 4 | Pending |
+| ASSESS-02 | Phase 4 | Pending |
+| ASSESS-03 | Phase 6 | Pending |
+| ASSESS-04 | Phase 4 | Pending |
 | INTERV-01 | Phase 4 | Pending |
 | INTERV-02 | Phase 4 | Pending |
 | INTERV-03 | Phase 4 | Pending |
 | INTERV-04 | Phase 4 | Pending |
-| TRANS-01 | Phase 4 | Pending |
-| TRANS-02 | Phase 4 | Pending |
-| TRANS-03 | Phase 4 | Pending |
-| REFLECT-01 | Phase 5 | Pending |
-| REFLECT-02 | Phase 5 | Pending |
-| REFLECT-03 | Phase 5 | Pending |
-| REFLECT-04 | Phase 5 | Pending |
-| OSS-01 | Phase 6 | Pending |
-| OSS-02 | Phase 6 | Pending |
-| OSS-03 | Phase 6 | Pending |
-| OSS-04 | Phase 6 | Pending |
+| TRANS-01 | Phase 5 | Pending |
+| TRANS-02 | Phase 5 | Pending |
+| TRANS-03 | Phase 5 | Pending |
+| REFLECT-01 | Phase 6 | Pending |
+| REFLECT-02 | Phase 6 | Pending |
+| REFLECT-03 | Phase 6 | Pending |
+| REFLECT-04 | Phase 6 | Pending |
+| OSS-01 | Phase 7 | Pending |
+| OSS-02 | Phase 1 | Pending |
+| OSS-03 | Phase 1 | Pending |
+| OSS-04 | Phase 7 | Pending |
 
 **Coverage:**
 - v1 requirements: 30 total
@@ -131,4 +131,4 @@
 
 ---
 *Requirements defined: 2026-03-14*
-*Last updated: 2026-03-14 after initial definition*
+*Last updated: 2026-03-14 after roadmap creation (phase assignments updated)*

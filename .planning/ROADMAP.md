@@ -92,11 +92,11 @@ Plans:
   2. `.pipeline/tasks/{taskId}/` 目录包含 step1.json 到 step5.json，每个文件含对应 Agent 的中间输出
   3. `pipeline.log` 包含该次运行的完整时间戳日志，`monitor.log` 包含文件触发记录
   4. 集成测试能用已知诈骗和已知正常样本验证流水线整体判断方向正确（诈骗样本 → verdict 非"正常"）
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: 编写端到端集成测试，验证 workflow.py 完整流水线和透明文件夹写入
-- [ ] 05-02: 验证 orchestrator.py 与监控层的集成触发链路
+- [ ] 05-01-PLAN.md — Orchestrator 集成测试（mock 五 Agent，验证 JSONL 链路和 stepN.json 写入）
+- [ ] 05-02-PLAN.md — 日志写入验证（TRANS-03）+ 监控触发链路 + 判断方向性测试
 
 ### Phase 6: 自我迭代验证
 **Goal**: 误判反馈流程能完整运行——从用户反馈到反思写入，再到下次分析读取更新后的规则

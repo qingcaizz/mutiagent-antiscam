@@ -135,7 +135,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. 基础环境 | 0/2 | Planned | - |
+| 1. 基础环境 | 1/2 | In Progress|  |
 | 2. 监控层验证 | 0/2 | Not started | - |
 | 3. Agent1-2 验证 | 0/2 | Not started | - |
 | 4. Agent3-5 验证 | 0/3 | Not started | - |

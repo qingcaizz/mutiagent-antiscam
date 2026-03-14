@@ -5,22 +5,22 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 2 - 监控层验证 (In Progress)
+**Current focus:** Phase 3 - OCR验证 (Next)
 
 ## Current Position
 
-Phase: 2 of 7 (监控层验证) — IN PROGRESS
-Plan: 1 of 2 in current phase — COMPLETE
+Phase: 2 of 7 (监控层验证) — COMPLETE
+Plan: 2 of 2 in current phase — COMPLETE
 Status: In Progress
-Last activity: 2026-03-14 — 完成 02-01: WeChat 监控 TDD 测试套件，18 passed 0 skipped
+Last activity: 2026-03-14 — 完成 02-02: Email 监控 TDD 测试套件，24 passed 0 skipped
 
-Progress: [███░░░░░░░] 21% (3/14 plans total)
+Progress: [████░░░░░░] 28% (4/14 plans total)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 4.7 minutes
+- Total plans completed: 4
+- Average duration: 3.5 minutes
 - Total execution time: 0.23 hours
 
 **By Phase:**
@@ -28,10 +28,10 @@ Progress: [███░░░░░░░] 21% (3/14 plans total)
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-基础环境 | 2 | 11 min | 5.5 min |
-| 02-监控层验证 | 1 | 3 min | 3 min |
+| 02-监控层验证 | 2 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (4 min), 01-02 (7 min), 02-01 (3 min)
+- Last 5 plans: 01-01 (4 min), 01-02 (7 min), 02-01 (3 min), 02-02 (2 min)
 - Trend: stable
 
 *Updated after each plan completion*
@@ -54,6 +54,8 @@ Recent decisions affecting current work:
 - [02-01]: Observer() 在 WeChatMonitor.__init__ 中实例化，patch 必须包裹整个构造调用
 - [02-01]: on_created 内 exists()+st_size==0 双重检查，单元测试必须写入非空真实文件
 - [02-01]: patch logger 路径为 'monitor.wechat_monitor.logger'，非 'loguru.logger'
+- [Phase 02-监控层验证]: 直接注入 mock connection，比 patch IMAP4_SSL 更简洁
+- [Phase 02-监控层验证]: Playwright 备路测试不依赖真实浏览器，验证 _create_task() 数据处理逻辑
 
 ### Pending Todos
 
@@ -67,5 +69,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-14
-Stopped at: 完成 02-01-PLAN.md 执行，WeChat 监控 TDD 测试套件 18 passed，提交 b06cbe2
+Stopped at: 完成 02-02-PLAN.md 执行，Email 监控 TDD 测试套件 24 passed，提交 bab300c
 Resume file: None

@@ -8,7 +8,7 @@
 ### 监控层 (MONITOR)
 
 - [ ] **MONITOR-01**: 系统能监控指定 WeChat 文件夹（Image/File 目录），新图片或文档出现时自动触发分析
-- [ ] **MONITOR-02**: 系统能通过 IMAP 轮询监控邮箱新邮件及图片附件
+- [x] **MONITOR-02**: 系统能通过 IMAP 轮询监控邮箱新邮件及图片附件
 - [x] **MONITOR-03**: 监控层防止重复触发（同一文件不重复分析），并记录监控日志
 
 ### 预处理与意图识别 (PREPROCESS)
@@ -94,7 +94,7 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | MONITOR-01 | Phase 2 | Pending |
-| MONITOR-02 | Phase 2 | Pending |
+| MONITOR-02 | Phase 2 | Complete |
 | MONITOR-03 | Phase 1 | Complete |
 | PREPROCESS-01 | Phase 3 | Pending |
 | PREPROCESS-02 | Phase 3 | Pending |

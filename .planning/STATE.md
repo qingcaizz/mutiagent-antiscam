@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-03-14)
 
 **Core value:** 自动检测诈骗 + 自我迭代学习——误判反馈触发反思，下次避免同类错误
-**Current focus:** Phase 6 - 自我迭代验证 — In Progress（2/5 plans done）
+**Current focus:** Phase 6 - 自我迭代验证 — Complete（3/3 plans done）
 
 ## Current Position
 
-Phase: 6 of 7 (自我迭代验证) — In Progress
-Plan: 2 of 5 in current phase — COMPLETE
-Status: In Progress
-Last activity: 2026-03-14 — 完成 06-02: 迭代闭环集成测试 2 tests passed（REFLECT-04/ASSESS-03），提交 a634db7
+Phase: 6 of 7 (自我迭代验证) — Complete
+Plan: 3 of 3 in current phase — COMPLETE
+Status: Phase Complete
+Last activity: 2026-03-14 — 完成 06-03: AssessmentAgent _load_memory_rules + 分数差异断言 PASSED（ASSESS-03/REFLECT-04），提交 49fddb7
 
-Progress: [█████████░] 86% (13/14 plans total)
+Progress: [██████████] 100% (14/14 plans total)
 
 ## Performance Metrics
 
@@ -39,6 +39,7 @@ Progress: [█████████░] 86% (13/14 plans total)
 
 *Updated after each plan completion*
 | Phase 06-自我迭代验证 P02 | 54 | 2 tasks | 1 files |
+| Phase 06-自我迭代验证 P03 | 10 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -79,6 +80,7 @@ Recent decisions affecting current work:
 - [06-01]: ReflectorAgent 通过三个独立路径参数实现完全 tmp_path 隔离
 - [Phase 06-02]: test_capabilities_readable_after_update 通过 tmp_path 完全隔离，不依赖真实 capabilities.md
 - [Phase 06-02]: test_agent4_reflects_updated_rules 验证 ASSESS-03 接口契约（memory_path 可读+run() 完成+step4.json 存在），不验证内容影响分数
+- [Phase 06]: 双向子串匹配解决中文无空格分词：et in kw.lower() 而非 kw in extracted_text，同时对齐 lower() 大小写
 
 ### Pending Todos
 

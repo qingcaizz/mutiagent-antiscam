@@ -50,22 +50,22 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — WeChat 监控 TDD 测试套件（文件类型过滤、去重防重复、logger 断言）
-- [ ] 02-02-PLAN.md — Email 监控 TDD 测试套件（IMAP mock 主路、MIME 解析、Playwright 备路骨架）
+- [x] 02-02-PLAN.md — Email 监控 TDD 测试套件（IMAP mock 主路、MIME 解析、Playwright 备路骨架）
 
 ### Phase 3: Agent1-2 验证
 **Goal**: 预处理+意图识别 Agent 和案例检索 Agent 的输出格式和内容符合下游 Agent 要求
 **Depends on**: Phase 1
 **Requirements**: PREPROCESS-01, PREPROCESS-02, PREPROCESS-03, RETRIEVAL-01, RETRIEVAL-02, RETRIEVAL-03
 **Success Criteria** (what must be TRUE):
-  1. 给定含文字的诈骗图片，Agent1 输出包含非空 `intent_label`（10种之一）、`confidence`（0-1 浮点数）、`key_features` 列表和 `content_summary` 字符串
-  2. 给定无文字的纯图标图片，Agent1 的 PaddleOCR 路径不崩溃，Claude Vision 路径正常返回结果
+  1. 给定含文字的诈骗图片，Agent1 输出包含非空 `intent_label`（配置文件定义的标签之一）、`confidence`（0-1 浮点数）、`key_indicators` 列表和 `extracted_text_summary` 字符串
+  2. 给定无文字的纯图标图片，Agent1 的 GLM-4.6V 路径不崩溃，正常返回结果
   3. Agent2 对任意输入能返回 TOP-5 案例列表，每条包含 `similarity_score`；当平均相似度 < 0.65 时输出包含低相关度警告标志
-  4. Agent1-2 测试套件全部通过，包含 mock Claude API 的单元测试和使用真实 LanceDB 的集成测试
-**Plans**: TBD
+  4. Agent1-2 测试套件全部通过，Agent1 真实调用 GLM+Qwen API，Agent2 使用真实本地 LanceDB
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: 为 agent1_preprocessor.py 编写 TDD 测试（OCR、Vision、输出格式验证）
-- [ ] 03-02: 为 agent2_retrieval.py 编写 TDD 测试（向量检索、相似度阈值、案例格式）
+- [ ] 03-01-PLAN.md — Agent1 代码改造（anthropic→GLM+Qwen）+ config/intent_labels.json + TDD 测试套件
+- [ ] 03-02-PLAN.md — Agent2 接口 bug 修复（search→search_similar）+ similarity_score 转换 + TDD 测试套件
 
 ### Phase 4: Agent3-5 验证
 **Goal**: 判别、风险评估和干预通知三个 Agent 能正确处理上游输入并产生规格内的输出和副作用

@@ -23,7 +23,15 @@ pipeline/
 
 # 向量数据库数据（含用户案例特征）
 cases/lancedb/
+cases/raw/
+
+# 运行时记忆数据（用户隐私）
+memory/reflections/
+memory/false_positives/
 
 # IDE
 .vscode/
 .idea/
+
+# 开发规划文档（内部使用）
+.planning/

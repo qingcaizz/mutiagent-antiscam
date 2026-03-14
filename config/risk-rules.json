@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "description": "诈骗风险识别规则集 - 社区可扩展",
+  "rules": [
+    {
+      "id": "R001",
+      "name": "紧急转账要求",
+      "category": "financial",
+      "keywords": ["立即转账", "马上汇款", "紧急打款", "今天必须", "不转就"],
+      "weight": 0.9,
+      "description": "要求立即转账的紧迫话术"
+    },
+    {
+      "id": "R002",
+      "name": "冒充公检法",
+      "category": "impersonation",
+      "keywords": ["公安局", "检察院", "法院", "逮捕令", "涉嫌犯罪", "配合调查", "安全账户"],
+      "weight": 0.95,
+      "description": "冒充公检法机关的诈骗话术"
+    },
+    {
+      "id": "R003",
+      "name": "网络刷单返利",
+      "category": "fraud_work",
+      "keywords": ["刷单", "刷好评", "兼职", "日赚", "佣金", "提现", "接单"],
+      "weight": 0.85,
+      "description": "刷单类诈骗招募"
+    },
+    {
+      "id": "R004",
+      "name": "感情骗局特征",
+      "category": "romance",
+      "keywords": ["投资平台", "带你赚钱", "股票内幕", "跟我投", "已经赚了"],
+      "weight": 0.85,
+      "description": "杀猪盘/感情骗局中的投资话术"
+    },
+    {
+      "id": "R005",
+      "name": "账号安全威胁",
+      "category": "phishing",
+      "keywords": ["账号异常", "需要验证", "点击链接", "输入验证码", "短信验证"],
+      "weight": 0.75,
+      "description": "钓鱼链接/验证码诈骗"
+    },
+    {
+      "id": "R006",
+      "name": "中奖通知",
+      "category": "lottery",
+      "keywords": ["恭喜中奖", "领取奖品", "交保证金", "手续费", "激活费"],
+      "weight": 0.90,
+      "description": "虚假中奖诈骗"
+    },
+    {
+      "id": "R007",
+      "name": "贷款诈骗",
+      "category": "loan",
+      "keywords": ["无抵押贷款", "秒到账", "免息贷款", "刷流水", "验资"],
+      "weight": 0.80,
+      "description": "虚假贷款诈骗"
+    },
+    {
+      "id": "R008",
+      "name": "保险理财正常话术",
+      "category": "whitelist",
+      "keywords": ["保险产品", "理财规划", "定期存款", "基金投资"],
+      "weight": -0.3,
+      "description": "正常保险理财话术（降低风险评分）",
+      "is_whitelist": true
+    }
+  ],
+  "thresholds": {
+    "extreme_high": 0.90,
+    "high": 0.75,
+    "medium": 0.55,
+    "low": 0.30
+  },
+  "special_conditions": [
+    {
+      "condition": "RAG相似度<0.65 且 涉及保险/理财",
+      "action": "额外检索正常话术对比库",
+      "description": "防止将正常保险推销误判为诈骗（来自误判案例#001）"
+    }
+  ]
+}

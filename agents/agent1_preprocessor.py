@@ -180,15 +180,21 @@ class PreprocessorAgent:
         )
         response_text = response.choices[0].message.content.strip()
 
+        # 移除 Qwen thinking 模型的思考链标签 <think>...</think>
+        response_text = re.sub(r"<think>[\s\S]*?</think>", "", response_text).strip()
+
         # 清理可能的 markdown 代码块
         if response_text.startswith("```"):
             lines = response_text.split("\n")
             response_text = "\n".join(lines[1:-1])
 
-        # 有时模型会在 JSON 后附加思考链，提取第一个完整 JSON 对象
+        # 提取第一个完整 JSON 对象（模型可能在 JSON 后附加说明文字）
         json_match = re.search(r"\{[\s\S]*\}", response_text)
         if json_match:
             response_text = json_match.group(0)
+
+        if not response_text:
+            raise ValueError("Qwen 返回空内容，无法解析 JSON")
 
         intent_result = json.loads(response_text)
 

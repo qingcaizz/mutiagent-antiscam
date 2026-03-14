@@ -57,7 +57,7 @@
 
 ### 开源可用性 (OPENSOURCE)
 
-- [ ] **OSS-01**: 项目包含 README.md（中英文），说明安装和使用方法
+- [x] **OSS-01**: 项目包含 README.md（中英文），说明安装和使用方法
 - [x] **OSS-02**: 提供 requirements.txt，用户可一键安装依赖
 - [x] **OSS-03**: 提供 config/.env.example，用户只需复制并填入自己的 API Key
 - [ ] **OSS-04**: sample-cases.json 案例数据已匿名化，可直接开源
@@ -119,7 +119,7 @@
 | REFLECT-02 | Phase 6 | Complete |
 | REFLECT-03 | Phase 6 | Complete |
 | REFLECT-04 | Phase 6 | Complete |
-| OSS-01 | Phase 7 | Pending |
+| OSS-01 | Phase 7 | Complete |
 | OSS-02 | Phase 1 | Complete |
 | OSS-03 | Phase 1 | Complete |
 | OSS-04 | Phase 7 | Pending |
